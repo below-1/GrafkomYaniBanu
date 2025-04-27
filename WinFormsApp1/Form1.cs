@@ -7,8 +7,8 @@ namespace WinFormsApp1
     {
         private static readonly int W = 700;
         private static readonly int H = 500;
-        private static readonly int XDIV = 30;
-        private static readonly int YDIV = 28;
+        private static readonly int XDIV = 50;
+        private static readonly int YDIV = 35;
         private static readonly int HLENGTH = W / XDIV;
         private static readonly int VLENGTH = H / YDIV;
         private static readonly int MIN_X = -1 * XDIV / 2;
@@ -38,11 +38,11 @@ namespace WinFormsApp1
             y2Field.Minimum = MIN_Y;
             y2Field.Maximum = MAX_Y;
 
-            x1Field.Value = 4;
-            y1Field.Value = 3;
+            x1Field.Value = 0;
+            y1Field.Value = 0;
 
-            x2Field.Value = 7;
-            y2Field.Value = 8;
+            x2Field.Value = 10;
+            y2Field.Value = 10;
         }
 
         private void label1_Click(object sender, EventArgs e)
