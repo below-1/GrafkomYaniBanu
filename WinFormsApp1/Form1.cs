@@ -135,8 +135,8 @@ namespace WinFormsApp1
                     boldPaint
                 );
                 canvas.DrawLine(
-                    new SKPoint(0, ((yDiv / 2) + 1) * hlength),
-                    new SKPoint(W, ((yDiv / 2) + 1) * hlength),
+                    new SKPoint(0, ((yDiv / 2) + 0) * hlength),
+                    new SKPoint(W, ((yDiv / 2) + 0) * hlength),
                     boldPaint
                 );
 
