@@ -129,11 +129,25 @@ namespace WinFormsApp1
                 //    new SKPoint(hcenter, H),
                 //    boldPaint
                 //);
-                //canvas.DrawLine(
-                //    new SKPoint(0, vcenter),
-                //    new SKPoint(W, vcenter),
-                //    boldPaint
-                //);
+                canvas.DrawLine(
+                    new SKPoint((xDiv + 0) / 2 * vlength, 0),
+                    new SKPoint((xDiv + 0) / 2 * vlength, H),
+                    boldPaint
+                );
+                canvas.DrawLine(
+                    new SKPoint(0, ((yDiv / 2) + 1) * hlength),
+                    new SKPoint(W, ((yDiv / 2) + 1) * hlength),
+                    boldPaint
+                );
+
+                using (SKPaint textPaint = new SKPaint())
+                {
+                    textPaint.Color = SKColor.Parse("222");
+                    textPaint.TextSize = 12.0f;
+                    textPaint.IsAntialias = true;
+                    textPaint.IsStroke = false;
+                    canvas.DrawText("0,0", xDiv / 2 * vlength, yDiv / 2 * hlength, textPaint);
+                }
 
                 for (int i = 1; i < xDiv; i++)
                 {
@@ -159,7 +173,7 @@ namespace WinFormsApp1
         {
             using (SKPaint paint = new SKPaint())
             {
-                paint.Color = SKColors.Coral;
+                paint.Color = new SKColor(252, 186, 3, 100);
                 paint.StrokeWidth = 1;
                 paint.Style = SKPaintStyle.Fill;
 
